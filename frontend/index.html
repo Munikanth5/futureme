@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMe | Hear from the version of you who made it</title>
+  <meta name="description" content="An AI-powered personal reflection platform that lets you speak with your future self. Get personalized letters and real-time chat based on your goals, struggles, and aspirations.">
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Gradients -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+  
+  <!-- Global Navigation Header -->
+  <nav class="global-nav">
+    <div class="nav-container">
+      <div class="nav-logo">Future<span>Me</span></div>
+      <div class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#portal-anchor">The Portal</a>
+        <a href="#preview-showcase">Sample Letters</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#portal-anchor" class="nav-cta">Launch Portal</a>
+    </div>
+  </nav>
+
+  <div class="app-container">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+      <div class="brand">Munikanth's Founder Labs</div>
+      <h1 class="hero-title">Meet the version of you<br>who <span>made it</span>.</h1>
+      <p class="hero-subtitle">FutureMe is a premium AI-powered reflection experience. Speak directly with your future self, receive a tailored blueprint to overcome your struggles, and establish a direct connection thread to your future timeline.</p>
+      <div class="hero-ctas">
+        <a href="#portal-anchor" class="glow-button hero-cta-btn">
+          <span>Align Your Timeline</span>
+          <div class="btn-glow"></div>
+        </a>
+        <a href="#how-it-works" class="secondary-btn hero-sec-btn">Learn How It Works</a>
+      </div>
+    </section>
+
+    <!-- 2. HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="info-section">
+      <div class="section-header-centered">
+        <span class="section-tag">Methodology</span>
+        <h2 class="section-main-title">The Transcendence Process</h2>
+        <p class="section-desc">A scientifically backed reflection process combined with advanced generative intelligence.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <h3>Reflect Deeply</h3>
+          <p>Document your current age, biggest life dreams, daily struggles, and your precise one-year vision to build context.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <h3>Calibrate Tone</h3>
+          <p>Choose your advisor archetype. Whether you need brutal honesty, calm mentorship, strategic CEO feedback, or high-energy motivation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <h3>Transcend Timeline</h3>
+          <p>Receive a high-impact diagnostic letter, customized mantras, warnings, and immediately engage in real-time conversation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE PORTAL SECTION (ANCHOR) -->
+    <div id="portal-anchor" class="portal-divider">
+      <div class="divider-line"></div>
+      <div class="divider-badge">THE PORTAL</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Phase 1: Input Form -->
+    <section id="form-section" class="card form-card">
+      <h2 class="section-title">Initialize Reflection Portal</h2>
+      <p class="section-subtitle">Provide your current state and aspirations to align the timeline.</p>
+      
+      <form id="reflection-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="input-name">Your Name</label>
+            <input type="text" id="input-name" placeholder="e.g. Nitish" required autocomplete="name">
+          </div>
+          <div class="form-group form-group-small">
+            <label for="input-age">Your Age</label>
+            <input type="number" id="input-age" placeholder="e.g. 23" min="1" max="120" required autocomplete="age">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="input-goal">Your Ultimate Goal / Dream</label>
+          <textarea id="input-goal" rows="2" placeholder="e.g. Build a successful AI startup that solves real-world logistics" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="input-struggle">Your Biggest Current Struggle</label>
+          <textarea id="input-struggle" rows="2" placeholder="e.g. Lack of consistency, getting distracted by secondary projects" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="input-vision">Where do you want to be in exactly one year?</label>
+          <textarea id="input-vision" rows="2" placeholder="e.g. Running a profitable AI company, leading a small talented team, feeling physically fit" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Choose the Tone of Your Future Self</label>
+          <div class="tone-cards">
+            <!-- Tone card 1 -->
+            <label class="tone-card-label">
+              <input type="radio" name="tone" value="Motivational" checked class="hidden-radio">
+              <div class="tone-card">
+                <div class="tone-icon">🔥</div>
+                <div class="tone-title">Motivational</div>
+                <div class="tone-desc">Warm, inspiring, highly supportive</div>
+              </div>
+            </label>
+
+            <!-- Tone card 2 -->
+            <label class="tone-card-label">
+              <input type="radio" name="tone" value="Brutally Honest" class="hidden-radio">
+              <div class="tone-card">
+                <div class="tone-icon">⚡</div>
+                <div class="tone-title">Brutally Honest</div>
+                <div class="tone-desc">Direct, sharp, absolutely zero excuses</div>
+              </div>
+            </label>
+
+            <!-- Tone card 3 -->
+            <label class="tone-card-label">
+              <input type="radio" name="tone" value="Calm Mentor" class="hidden-radio">
+              <div class="tone-card">
+                <div class="tone-icon">🍃</div>
+                <div class="tone-title">Calm Mentor</div>
+                <div class="tone-desc">Peaceful, wise, gentle and grounded</div>
+              </div>
+            </label>
+
+            <!-- Tone card 4 -->
+            <label class="tone-card-label">
+              <input type="radio" name="tone" value="CEO Mode" class="hidden-radio">
+              <div class="tone-card">
+                <div class="tone-icon">📈</div>
+                <div class="tone-title">CEO Mode</div>
+                <div class="tone-desc">Strategic, metric-driven, execution-heavy</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="glow-button">
+          <span>Align Timeline & Generate</span>
+          <div class="btn-glow"></div>
+        </button>
+      </form>
+    </section>
+
+    <!-- Phase 2: Loading State -->
+    <section id="loading-section" class="card loading-card hidden">
+      <div class="portal-spinner">
+        <div class="spinner-ring ring-1"></div>
+        <div class="spinner-ring ring-2"></div>
+        <div class="spinner-ring ring-3"></div>
+        <div class="portal-core">✨</div>
+      </div>
+      <h3 id="loading-title">Aligning Timelines...</h3>
+      <p id="loading-subtitle">Contacting your future consciousness...</p>
+    </section>
+
+    <!-- Phase 3: Results -->
+    <section id="result-section" class="result-container hidden">
+      <!-- Dashboard Grid Layout -->
+      <div class="dashboard-grid">
+        <!-- Left Column: Main Letter Panel -->
+        <div class="card dashboard-main">
+          <div class="card-glow-overlay"></div>
+
+          <div class="result-header">
+            <div class="header-titles">
+              <div class="badge future-badge" id="res-badge">Unstoppable Builder</div>
+              <div class="timeline-stamp">Timeline Aligned: 1 Year Ahead</div>
+            </div>
+            
+            <!-- Utility Toolbar moved inside header to prevent overlap -->
+            <div class="utility-toolbar">
+              <button id="export-btn" class="utility-icon-btn" title="Export 30-Day Blueprint">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              </button>
+              <button id="copy-btn" class="utility-icon-btn" title="Copy Reflection">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              </button>
+              <button id="reset-btn" class="utility-icon-btn" title="Adjust Parameters">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="letter-container">
+            <h2 class="letter-title">To My Past Self,</h2>
+            <div class="letter-body" id="res-message">
+              <!-- Injected by script.js -->
+            </div>
+            <div class="letter-signature" id="res-signature">— Your Future Self</div>
+          </div>
+
+          <!-- Primary Actions -->
+          <div class="primary-actions">
+            <button id="listen-btn" class="secondary-btn audio-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+              Listen (Audio)
+            </button>
+            <button id="chat-toggle-btn" class="primary-glow-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+              Converse with FutureMe
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Strategy Widgets -->
+        <div class="dashboard-sidebar">
+          <!-- Mantra Widget -->
+          <div class="card widget-card mantra-widget">
+            <span class="widget-label">YOUR DAILY MANTRA</span>
+            <div class="widget-content italic-content" id="res-mantra">"Actions over emotions. Execution over excuses."</div>
+          </div>
+
+          <!-- Mistake Widget -->
+          <div class="card widget-card warning-widget">
+            <div class="widget-header">
+              <div class="widget-icon">⚠️</div>
+              <h4>Mistake to Avoid</h4>
+            </div>
+            <p class="widget-content" id="res-warning">Procrastinating under the guise of waiting for inspiration.</p>
+          </div>
+
+          <!-- Habit Widget -->
+          <div class="card widget-card habit-widget">
+            <div class="widget-header">
+              <div class="widget-icon">💡</div>
+              <h4>One Daily Habit</h4>
+            </div>
+            <p class="widget-content" id="res-habit">Write code for 45 minutes first thing in the morning.</p>
+          </div>
+
+          <!-- Actions Widget -->
+          <div class="card widget-card actions-widget">
+            <h4 class="widget-title">Your Next 3 Moves</h4>
+            <div class="actions-list" id="res-actions">
+              <!-- 3 Moves injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Drawer -->
+      <div id="chat-section" class="card chat-card hidden-chat">
+        <div class="chat-header">
+          <div class="chat-status">
+            <div class="status-dot pulsing"></div>
+            <span id="chat-header-title">Direct Thread: Future Nitish</span>
+          </div>
+          <div class="chat-tag">Strict Timeline Connection</div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages-container">
+          <!-- Chat bubbles go here -->
+        </div>
+
+        <!-- Loading indicator -->
+        <div class="chat-typing-indicator hidden" id="chat-typing">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-text">FutureMe is writing...</span>
+        </div>
+
+        <form id="chat-form" class="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Ask your future self anything..." autocomplete="off">
+          
+          <button type="button" id="mic-btn" class="chat-mic-btn" aria-label="Voice Input" title="Voice Input">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+          </button>
+
+          <button type="submit" class="chat-send-btn" aria-label="Send Message">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. CHRONOLOGY PREVIEW GALLERY -->
+    <section id="preview-showcase" class="showcase-section">
+      <div class="section-header-centered">
+        <span class="section-tag">Archetypes Gallery</span>
+        <h2 class="section-main-title">Letters From the Future</h2>
+        <p class="section-desc">Click an archetype below to preview the kind of letters materializing from the future timeline.</p>
+      </div>
+
+      <div class="showcase-container card">
+        <div class="showcase-tabs">
+          <button class="showcase-tab active" onclick="switchShowcaseTab(this, 'ceo')">CEO Mode</button>
+          <button class="showcase-tab" onclick="switchShowcaseTab(this, 'honest')">Brutally Honest</button>
+          <button class="showcase-tab" onclick="switchShowcaseTab(this, 'mentor')">Calm Mentor</button>
+        </div>
+
+        <div class="showcase-content">
+          <!-- CEO Tab Content -->
+          <div id="showcase-ceo" class="showcase-tab-panel active-panel">
+            <div class="showcase-letter">
+              <span class="showcase-badge">Future Identity: Strategic Architect</span>
+              <p class="showcase-quote">"Your core issue right now is not a personality defect; it is a system breakdown. You need operational rigor. The transition from where you stand today to running a profitable company requires you to view your habits as systems. If your inputs are inconsistent, your metrics will fail. Automate secondary choices and focus 100% on leverage. You have the vision—now execute it like a professional CEO."</p>
+              <div class="showcase-meta">
+                <span class="showcase-mantra">Mantra: "Double down on systems, not motivation."</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brutally Honest Tab Content -->
+          <div id="showcase-honest" class="showcase-tab-panel">
+            <div class="showcase-letter">
+              <span class="showcase-badge">Future Identity: Action-First Operator</span>
+              <p class="showcase-quote">"Stop looking for hacks or trying to feel 'motivated' before you start. The version of me writing this to you didn't become consistent by accident. I became consistent because I stopped negotiating with my feelings. The days you don't feel like working are the exact days that define your future. Stop checking your phone, stop planning, and start building."</p>
+              <div class="showcase-meta">
+                <span class="showcase-mantra">Mantra: "Actions over emotions. Execution over excuses."</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calm Mentor Tab Content -->
+          <div id="showcase-mentor" class="showcase-tab-panel">
+            <div class="showcase-letter">
+              <span class="showcase-badge">Future Identity: Grounded Leader</span>
+              <p class="showcase-quote">"Growth is not a straight upward line; it is a spiral of learning, forgetting, and remembering. I want you to know that the peace and success you enjoy in a year was not built on a foundation of self-punishment or frantic stress. It was built by showing up, day after day, with a quiet and sincere heart. Let go of the pressure to be perfect."</p>
+              <div class="showcase-meta">
+                <span class="showcase-mantra">Mantra: "Patience is my power. One quiet step at a time."</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAQ ACCORDION SECTION -->
+    <section id="faq" class="faq-section">
+      <div class="section-header-centered">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-main-title">Timeline Alignment FAQs</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h4>How does FutureMe generate these messages?</h4>
+            <span class="faq-chevron">＋</span>
+          </div>
+          <div class="faq-answer">
+            <p>FutureMe securely communicates with the Google Gemini API, sending details about your current goals, struggles, and desired tone. It uses robust system instruction prompts to align Gemini's contextual personality, creating an authentic, deeply reflective voice speaking directly to you from a future perspective.</p>
+          </div>
+        </div>
+
+        <div class="faq-card" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h4>Can I keep speaking with my future self?</h4>
+            <span class="faq-chevron">＋</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Once your timeline is aligned and your initial diagnostic letter is generated, click the "Converse with FutureMe" button. This unlocks a secure chat window where you can ask specific strategic questions about how to handle your upcoming week, your fears, or request operational feedback.</p>
+          </div>
+        </div>
+
+        <div class="faq-card" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <h4>Is my reflection data secure?</h4>
+            <span class="faq-chevron">＋</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. FutureMe is designed for instant secure deployment. Your personal reflection details are sent securely directly to your local backend server and passed to the Gemini API. We do not store or persist your data in any central database, keeping your journal strictly private.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 FutureMe. All Rights Reserved.</p>
+      <p class="brand-signature">Designed & Crafted by <strong>Munikanth's Founder Labs</strong></p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Wrapper -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+  
+  <!-- Additional Page Interactions Script -->
+  <script>
+    function switchShowcaseTab(button, tabId) {
+      // Deactivate all tabs
+      document.querySelectorAll('.showcase-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      // Deactivate all panels
+      document.querySelectorAll('.showcase-tab-panel').forEach(panel => {
+        panel.classList.remove('active-panel');
+      });
+      
+      // Activate clicked tab
+      button.classList.add('active');
+      // Activate target panel
+      document.getElementById('showcase-' + tabId).classList.add('active-panel');
+    }
+
+    function toggleFaq(card) {
+      const answer = card.querySelector('.faq-answer');
+      const chevron = card.querySelector('.faq-chevron');
+      
+      if (card.classList.contains('active-faq')) {
+        card.classList.remove('active-faq');
+        chevron.textContent = '＋';
+      } else {
+        card.classList.add('active-faq');
+        chevron.textContent = '－';
+      }
+    }
+  </script>
+</body>
+</html>
